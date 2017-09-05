@@ -5,7 +5,9 @@ $(document).ready(function() {
   event.preventDefault();
   var title = $('#title').val();
   var entry = $('#entry').val();
-  $('#description').append("<li>" + title + "<br>" + entry + "</li>");
+  var newEntry = new Entry (entry);
+  var numOfConsonants = newEntry.countConsonants(entry);
+  $('#description').append("<li>" + "Number of Consonants in your entry" + " " + numOfConsonants + "</li>");
 });
 
 });

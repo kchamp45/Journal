@@ -5,7 +5,9 @@ $(document).ready(function() {
   event.preventDefault();
   var title = $('#title').val();
   var entry = $('#entry').val();
-  $('#description').append("<li>" + title + "<br>" + entry + "</li>");
+  var newEntry = new Entry (entry);
+  var numOfWords = newEntry.countWords(entry);
+  $('#description').append("<li>" + "Number of words in your entry" + " " + numOfWords + "</li>");
 });
 
 });
